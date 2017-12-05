@@ -1,0 +1,11 @@
+Omdøb Inded.php til fx data.php
+
+Lav ny index.php
+
+I index.php lav:
+
+<form method="post" bla="/data.php>
+    <Brugernavn>
+    <PAssword>
+    <Submit>
+</form>

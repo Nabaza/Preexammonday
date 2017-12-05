@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="exdb">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="landeinfo"/>
+    <schema id="5" parent="1" name="mysql"/>
+    <schema id="6" parent="1" name="oiedb"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="startsiden"/>
+    <schema id="9" parent="1" name="test"/>
+    <schema id="10" parent="1" name="usersystem"/>
+    <schema id="11" parent="1" name="world"/>
+    <table id="12" parent="2" name="agents"/>
+    <table id="13" parent="2" name="company"/>
+    <table id="14" parent="2" name="customer"/>
+    <table id="15" parent="2" name="daysorder"/>
+    <table id="16" parent="2" name="despatch"/>
+    <table id="17" parent="2" name="foods"/>
+    <table id="18" parent="2" name="listofitem"/>
+    <table id="19" parent="2" name="orders"/>
+    <table id="20" parent="2" name="student"/>
+    <table id="21" parent="2" name="studentreport"/>
+    <column id="22" parent="12" name="AGENT_CODE">
+      <Position>1</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="23" parent="12" name="AGENT_NAME">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="24" parent="12" name="WORKING_AREA">
+      <Position>3</Position>
+      <DataType>varchar(35)|0</DataType>
+    </column>
+    <column id="25" parent="12" name="COMMISSION">
+      <Position>4</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="26" parent="12" name="PHONE_NO">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+    </column>
+    <column id="27" parent="12" name="COUNTRY">
+      <Position>6</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="28" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>AGENT_CODE</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="13" name="COMPANY_ID">
+      <Position>1</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="30" parent="13" name="COMPANY_NAME">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="31" parent="13" name="COMPANY_CITY">
+      <Position>3</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <key id="32" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>COMPANY_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="33" parent="14" name="CUST_CODE">
+      <Position>1</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="14" name="CUST_NAME">
+      <Position>2</Position>
+      <DataType>varchar(40)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="14" name="CUST_CITY">
+      <Position>3</Position>
+      <DataType>varchar(35)|0</DataType>
+    </column>
+    <column id="36" parent="14" name="WORKING_AREA">
+      <Position>4</Position>
+      <DataType>varchar(35)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="14" name="CUST_COUNTRY">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="14" name="GRADE">
+      <Position>6</Position>
+      <DataType>decimal(10)|0</DataType>
+    </column>
+    <column id="39" parent="14" name="OPENING_AMT">
+      <Position>7</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="40" parent="14" name="RECEIVE_AMT">
+      <Position>8</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="14" name="PAYMENT_AMT">
+      <Position>9</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="14" name="OUTSTANDING_AMT">
+      <Position>10</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="14" name="PHONE_NO">
+      <Position>11</Position>
+      <DataType>varchar(17)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="14" name="AGENT_CODE">
+      <Position>12</Position>
+      <DataType>varchar(6)|0</DataType>
+    </column>
+    <index id="45" parent="14" name="CUSTCITY">
+      <ColNames>CUST_CITY</ColNames>
+    </index>
+    <index id="46" parent="14" name="CUSTCITY_COUNTRY">
+      <ColNames>CUST_CITY
+CUST_COUNTRY</ColNames>
+    </index>
+    <column id="47" parent="15" name="ORD_NUM">
+      <Position>1</Position>
+      <DataType>decimal(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="15" name="ORD_AMOUNT">
+      <Position>2</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="15" name="ADVANCE_AMOUNT">
+      <Position>3</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="15" name="ORD_DATE">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="15" name="CUST_CODE">
+      <Position>5</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="52" parent="15" name="AGENT_CODE">
+      <Position>6</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="15" name="ORD_DESCRIPTION">
+      <Position>7</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="16" name="DES_NUM">
+      <Position>1</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="55" parent="16" name="DES_DATE">
+      <Position>2</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="56" parent="16" name="DES_AMOUNT">
+      <Position>3</Position>
+      <DataType>decimal(12,2)|0</DataType>
+    </column>
+    <column id="57" parent="16" name="ORD_NUM">
+      <Position>4</Position>
+      <DataType>decimal(6)|0</DataType>
+    </column>
+    <column id="58" parent="16" name="ORD_DATE">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="59" parent="16" name="ORD_AMOUNT">
+      <Position>6</Position>
+      <DataType>decimal(12,2)|0</DataType>
+    </column>
+    <column id="60" parent="16" name="AGENT_CODE">
+      <Position>7</Position>
+      <DataType>varchar(6)|0</DataType>
+    </column>
+    <key id="61" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DES_NUM</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="62" parent="17" name="ITEM_ID">
+      <Position>1</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="63" parent="17" name="ITEM_NAME">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+    </column>
+    <column id="64" parent="17" name="ITEM_UNIT">
+      <Position>3</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="65" parent="17" name="COMPANY_ID">
+      <Position>4</Position>
+      <DataType>varchar(6)|0</DataType>
+    </column>
+    <key id="66" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ITEM_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="18" name="ITEMCODE">
+      <Position>1</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="18" name="ITEMNAME">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="18" name="BATCHCODE">
+      <Position>3</Position>
+      <DataType>varchar(35)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="18" name="CONAME">
+      <Position>4</Position>
+      <DataType>varchar(35)|0</DataType>
+    </column>
+    <index id="71" parent="18" name="ITEMCODE">
+      <ColNames>ITEMCODE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="18" name="ITEMCODE">
+      <ColNames>ITEMCODE</ColNames>
+      <UnderlyingIndexName>ITEMCODE</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="19" name="ORD_NUM">
+      <Position>1</Position>
+      <DataType>decimal(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="19" name="ORD_AMOUNT">
+      <Position>2</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="75" parent="19" name="ADVANCE_AMOUNT">
+      <Position>3</Position>
+      <DataType>decimal(12,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="19" name="ORD_DATE">
+      <Position>4</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="19" name="CUST_CODE">
+      <Position>5</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="19" name="AGENT_CODE">
+      <Position>6</Position>
+      <DataType>varchar(6)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="19" name="ORD_DESCRIPTION">
+      <Position>7</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="80" parent="20" name="NAME">
+      <Position>1</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="20" name="TITLE">
+      <Position>2</Position>
+      <DataType>varchar(25)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="20" name="CLASS">
+      <Position>3</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="20" name="SECTION">
+      <Position>4</Position>
+      <DataType>varchar(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="20" name="ROLLID">
+      <Position>5</Position>
+      <DataType>decimal(3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="85" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CLASS
+SECTION
+ROLLID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="86" parent="21" name="CLASS">
+      <Position>1</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="21" name="SECTION">
+      <Position>2</Position>
+      <DataType>varchar(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="21" name="ROLLID">
+      <Position>3</Position>
+      <DataType>decimal(3)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="21" name="GRADE">
+      <Position>4</Position>
+      <DataType>varchar(5)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="21" name="SEMISTER">
+      <Position>5</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="91" parent="21" name="CLASS_ATTENDED">
+      <Position>6</Position>
+      <DataType>decimal(25)|0</DataType>
+    </column>
+    <index id="92" parent="21" name="FK_CSR">
+      <ColNames>CLASS
+SECTION
+ROLLID</ColNames>
+    </index>
+  </database-model>
+</dataSource>
